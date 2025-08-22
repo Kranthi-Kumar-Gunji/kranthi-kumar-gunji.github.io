@@ -1,25 +1,24 @@
-# Kranthi Portfolio (GitHub Pages)
 
-A clean, multi‑page personal site built with HTML/CSS/JS.
+# Kranthi Kumar Gunji – Dark Blue Portfolio (v3)
 
 ## Pages
-- `index.html` — Home
-- `about.html` — About
-- `skills.html` — Skills
-- `projects.html` — Projects (auto‑loads latest GitHub repos)
-- `resume.html` — Embedded PDF resume + download
-- `contact.html` — Contact links
+- `index.html` – Home (3 sections: title card + profile, summary, education & certs side-by-side with images).
+- `skills.html` – 3 sections, 2 cards each; **glowing buttons** (no pictures).
+- `experience.html` – Curved, centerline timeline with alternating cards; **year badges** (start year, newest first).
+- `projects.html` – 3 sections: featured projects, auto GitHub, auto Trailblazer rank/points.
+- `contact.html` – 2 sections: contact form and contact info.
 
-## Local preview
-Open with Live Server in VS Code (or just double‑click `index.html`).
+## Run locally (VS Code)
+1. Open folder in VS Code.
+2. Install extension **Live Server** (Ritwick Dey).
+3. Right‑click `index.html` → **Open with Live Server** (or double‑click `index.html`).
 
-## Publish on GitHub Pages
-1. Create a new repo on GitHub (e.g., `kranthi-portfolio`).
-2. Push these files.
-3. In **Settings → Pages**, set **Source** to `Deploy from a branch`, `main` branch, `/ (root)`.
-4. Your site will be live at `https://<your-username>.github.io/kranthi-portfolio/`.
+## Deploy (GitHub Pages)
+1. Create a repo (e.g., `kranthi-portfolio-v3`) and push/upload all files.
+2. Repo **Settings → Pages** → Source: `main` branch, root (`/`).
+3. Visit `https://<username>.github.io/kranthi-portfolio-v3/`.
 
-## Replace content
-- Swap `assets/img/profile.png` with your own portrait (same name).
-- Update contact links in `contact.html` and `footer` if needed.
-- The resume PDF lives at `assets/resume/Kranthi_Kumar_Gunji_Resume.pdf` — replace with your latest.
+## Notes
+- **Images not visible?** They are under `assets/images/` with correct relative paths; ensure you keep folder structure.
+- **Trailblazer** values are fetched via a CORS-friendly mirror (`r.jina.ai`). If it ever fails, values show `N/A` but the link still works.
+- **GitHub feed** reads your public repos from the GitHub API without a token.
