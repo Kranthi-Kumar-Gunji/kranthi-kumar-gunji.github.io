@@ -1,0 +1,76 @@
+[
+  {
+    "title": "ETL & Data Engineering",
+    "skills": [
+      "SAP BODS",
+      "Informatica",
+      "SAP Data Services",
+      "ETL Scheduling",
+      "Data Cleansing",
+      "Data Validation"
+    ]
+  },
+  {
+    "title": "Visualization Tools",
+    "skills": [
+      "Tableau",
+      "Power BI",
+      "SAP Lumira",
+      "Excel",
+      "Jupyter Notebooks"
+    ]
+  },
+  {
+    "title": "Databases & Query Tools",
+    "skills": [
+      "SQL",
+      "Microsoft SQL Server",
+      "Oracle Database",
+      "Snowflake",
+      "SSMS",
+      "SQL Developer"
+    ]
+  },
+  {
+    "title": "Cloud Infrastructure",
+    "skills": [
+      "AWS S3",
+      "AWS EC2",
+      "AWS IAM",
+      "AWS Lambda",
+      "Snowflake",
+      "Salesforce Cloud Platform"
+    ]
+  },
+  {
+    "title": "Salesforce Tools",
+    "skills": [
+      "Apex",
+      "Lightning Components",
+      "Flow Builder",
+      "Process Builder",
+      "Tableau CRM",
+      "Data Loader.io",
+      "Change Sets",
+      "Metadata API",
+      "Profiles",
+      "Permission Sets",
+      "REST/SOAP APIs",
+      "SOQL",
+      "SOSL",
+      "Salesforce CLI",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Programming & Scripting",
+    "skills": [
+      "Python",
+      "Shell Scripting",
+      "SQL",
+      "Apex",
+      "HTML",
+      "Java"
+    ]
+  }
+]

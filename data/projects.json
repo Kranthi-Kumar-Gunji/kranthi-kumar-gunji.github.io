@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Nonprofit Impact Data Warehouse",
+    "desc": "Centralized program, funding, and outcomes data; automated dashboards for real-time impact.",
+    "stack": [
+      "Snowflake",
+      "Python",
+      "Tableau"
+    ]
+  },
+  {
+    "title": "Salesforce \u2192 Tableau CRM Dashboards",
+    "desc": "Executive dashboards for SLA, churn, pipeline.",
+    "stack": [
+      "Salesforce",
+      "Tableau CRM"
+    ]
+  },
+  {
+    "title": "SAP HANA Real-Time Ops Reporting",
+    "desc": "Modeled HANA views; low-latency insights.",
+    "stack": [
+      "SAP BODS",
+      "SAP HANA",
+      "Tableau",
+      "Lumira"
+    ]
+  }
+]
