@@ -16,18 +16,38 @@ This site highlights my career journey, technical expertise, and projects in an 
 
 ---
 
-## 📂 Structure  
+## 📂 Structure
+```text
 kranthi-portfolio/
-│── index.html
-│── skills.html
-│── projects.html
-│── experience.html
-│── contact.html
-│── contact-form.html
-│── social-buttons.html
-│── assets/images/
-│── css/
-│── js/
+├─ index.html
+├─ skills.html
+├─ projects.html
+├─ experience.html
+├─ contact.html
+├─ contact-form.html
+├─ social-buttons.html
+├─ assets/
+│  └─ images/
+│     ├─ csu.png
+│     ├─ profile.png
+│     ├─ salesforce.jpg
+│     ├─ sf-admin.png
+│     ├─ sf-pd1.png
+│     └─ vtu.png
+├─ css/
+│  ├─ contact.css
+│  ├─ experience.css
+│  ├─ home.css
+│  ├─ projects.css
+│  ├─ skills.css
+│  └─ styles.css
+└─ js/
+   ├─ common.js
+   ├─ contact.js
+   ├─ experience.js
+   ├─ skills.js
+   └─ social-buttons.js
+
 
 ---
 
