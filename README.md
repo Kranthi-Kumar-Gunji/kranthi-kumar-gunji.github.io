@@ -1,62 +1,47 @@
-# 👋 Hi, I'm Kranthi Kumar Gunji  
+# 🚀 Kranthi Portfolio Website  
 
-💡 **Salesforce Consultant | Data Engineer | Data Scientist Intern**  
-5+ years of experience in CRM, ETL, BI, and analytics solutions across Salesforce, cloud, and database platforms.  
+Welcome to my **personal portfolio** 🎉  
+This site highlights my career journey, technical expertise, and projects in an elegant, responsive design.  
 
----
-
-## 🚀 About Me  
-- 🎓 Master’s in Information Systems – Cleveland State University (Aug 2023 – May 2025)  
-- 🎓 Bachelor of Engineering in ECE – VTU University (2014 – 2018)  
-- 💻 Experienced with Salesforce, SQL, Python, Tableau, Power BI, SAP BODS, Snowflake, and AWS.  
-- 🔗 Skilled in building **scalable data pipelines**, integrating Salesforce with REST/SOAP APIs, and designing impactful dashboards.  
-- 🌍 Experienced in **nonprofit and corporate projects**, improving reporting accuracy and accelerating insights.  
+🌍 **Live Site**: [Kranthi Portfolio](https://kranthi-kumar-gunji.github.io/kranthi-portfolio/)  
 
 ---
 
-## 🛠️ Technical Skills  
-
-**Salesforce Platform**  
-Apex, Lightning Components, Flow Builder, Process Builder, Validation Rules, Approval Processes, Tableau CRM, Data Loader.io, Metadata API, REST/SOAP APIs  
-
-**Databases & ETL**  
-SQL, Snowflake, MS SQL Server, Oracle, SAP BODS, Informatica, Data Cleansing, ETL Scheduling  
-
-**Visualization Tools**  
-Tableau, Power BI, SAP Lumira, Excel, Jupyter  
-
-**Programming & Cloud**  
-Python, Shell Scripting, HTML, Java, AWS (S3, EC2, IAM, Lambda)  
+## 🔑 Highlights  
+- Responsive and mobile-first UI  
+- Skills page with categorised badges  
+- Projects page with analytics & engineering case studies  
+- Dedicated pages for Experience and Education  
+- Contact page with form and social buttons  
 
 ---
 
-## 📊 Featured Projects  
-
-- **[Title Card Portfolio](./title-card.html)**  
-  Responsive HTML/CSS title card highlighting my skills and certifications.  
-  *(Tip: Save as `index.html` and host on GitHub Pages to use as a portfolio landing page.)*  
-
-- **Data Pipelines & ML Models**  
-  Built scalable data pipelines in Python/SQL on AWS and Snowflake; designed and validated ML models for business challenges.  
-
-- **Salesforce Dashboards & Automations**  
-  Delivered custom Lightning interfaces, Apex triggers, SOQL queries, Tableau CRM dashboards, and API integrations.  
-
----
-
-## 🏆 Certifications  
-- Salesforce Certified **Platform Developer I** (2022)  
-- Salesforce Certified **Administrator** (2022)  
-- 7× Superbadges | 3× Ranger Rank  
+## 📂 Structure  
+kranthi-portfolio/
+│── index.html
+│── skills.html
+│── projects.html
+│── experience.html
+│── contact.html
+│── contact-form.html
+│── social-buttons.html
+│── assets/images/
+│── css/
+│── js/
 
 ---
 
-## 📬 Let’s Connect  
-
-- 📧 Email: [kranthikumar0013@gmail.com](mailto:kranthikumar0013@gmail.com)  
-- 💼 LinkedIn: [linkedin.com/in/kranthikumargunji](https://linkedin.com/in/kranthikumargunji)  
-- 🖥️ GitHub: [github.com/Kranthi-Kumar-Gunji](https://github.com/Kranthi-Kumar-Gunji)  
+## 🛠️ Technologies Used  
+- **HTML5** → semantic page structures  
+- **CSS3** → modular design, responsive flexbox/grid, gradient themes  
+- **JavaScript** → animations, form validation, dynamic elements  
+- **GitHub Pages** → static hosting for the live site  
 
 ---
 
-⭐️ From [Kranthi Kumar Gunji](https://github.com/Kranthi-Kumar-Gunji)  
+## 📬 Contact Info  
+**Kranthi Kumar Gunji**  
+📧 [kranthikumar0013@gmail.com](mailto:kranthikumar0013@gmail.com)  
+💼 [LinkedIn](https://linkedin.com/in/kranthikumargunji)  
+🖥️ [GitHub](https://github.com/Kranthi-Kumar-Gunji)  
+⭐ Don’t forget to star ⭐ this repo if you like the design!  
