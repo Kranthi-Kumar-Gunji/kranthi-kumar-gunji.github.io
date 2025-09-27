@@ -1,100 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skills – Kranthi Kumar Gunji</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/skills.css" />
 </head>
 <body>
-  
-    <nav class="nav">
-      <div class="nav-inner container">
-        <div class="brand">Kranthi Kumar Gunji</div>
-        <div class="menu"><a class="" href="index.html">Home</a><a class="active" href="skills.html">Skills</a><a class="" href="experience.html">Experience</a><a class="" href="projects.html">Projects</a><a class="" href="contact.html">Contact</a></div>
+  <!-- Top Navigation -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <div class="brand">Kranthi Kumar Gunji</div>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a class="active" href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </nav>
-    
-  <main class="container">
-    <h1 class="section-title">Skills</h1>
+    </div>
+  </nav>
 
-    <section class="grid grid-2" style="margin-bottom:10px">
-		<article class="card" style="margin-bottom:0">
-		<h2>ETL & Data Engineering</h2>
-		<div>
-			<span class="skill-btn">SAP BODS</span>
-			<span class="skill-btn">Informatica</span>
-			<span class="skill-btn">SAP Data Services</span>
-			<span class="skill-btn">ETL Scheduling</span>
-			<span class="skill-btn">Data Cleansing</span>
-			<span class="skill-btn">Data Validation</span>
-		</div></article>
-		
-		<article class="card" style="margin-bottom:0">
-		<h2>Visualization Tools</h2>
-		<div>
-			<span class="skill-btn">Tableau</span>
-			<span class="skill-btn">Power BI</span>
-			<span class="skill-btn">SAP Lumira</span>
-			<span class="skill-btn">Excel</span>
-			<span class="skill-btn">Jupyter Notebooks</span>
-		</div></article>
-	</section>
-	
-	<section class="grid grid-2" style="margin-bottom:10px">
-		<article class="card" style="margin-bottom:0">
-		<h2>Databases & Query Tools</h2>
-		<div>
-			<span class="skill-btn">SQL</span>
-			<span class="skill-btn">Microsoft SQL Server</span>
-			<span class="skill-btn">Oracle Database</span>
-			<span class="skill-btn">Snowflake</span>
-			<span class="skill-btn">SSMS</span>
-			<span class="skill-btn">SQL Developer</span>
-		</div></article>
-		
-		<article class="card" style="margin-bottom:0">
-		<h2>Cloud Infrastructure</h2>
-		<div>
-			<span class="skill-btn">AWS S3</span>
-			<span class="skill-btn">AWS EC2</span>
-			<span class="skill-btn">AWS IAM</span>
-			<span class="skill-btn">AWS Lambda</span>
-			<span class="skill-btn">Snowflake</span>
-			<span class="skill-btn">Salesforce Cloud Platform</span>
-		</div></article>
-	</section>
-	
-	<section class="grid grid-2" style="margin-bottom:10px">
-		<article class="card" style="margin-bottom:0">
-		<h2>Salesforce Tools</h2>
-		<div>
-			<span class="skill-btn">Tableau CRM</span>
-			<span class="skill-btn">Data Loader.io</span>
-			<span class="skill-btn">Profiles</span>
-			<span class="skill-btn">Permission Sets</span>
-			<span class="skill-btn">SOQL & SOSL</span>
-			<span class="skill-btn">Apex</span>
-			<span class="skill-btn">Lightning Components</span>
-			<span class="skill-btn">Process & Flow Builder</span>
-		</div></article>
-		
-		<article class="card" style="margin-bottom:0">
-		<h2>Programming & Scripting</h2>
-		<div>
-			<span class="skill-btn">Python</span>
-			<span class="skill-btn">Shell Scripting</span>
-			<span class="skill-btn">SQL</span>
-			<span class="skill-btn">Apex</span>
-			<span class="skill-btn">HTML</span>
-			<span class="skill-btn">Java</span>
-			<span class="skill-btn">VS Code</span>
-		</div></article>
-	</section>
+  <!-- Main Content -->
+  <main class="container has-fixed-sidebar">
+    <div class="skills-layout">
+      <!-- Fixed Options Sidebar (left) -->
+      <aside class="options-card" id="optionsCard" aria-label="Skill filters">
+        <h2 class="options-title">Options</h2>
+        <button class="clear-btn-compact" id="clearFilters" title="Clear filters" aria-label="Clear filters">✕</button>
+        <div class="filters" id="filters"></div>
+      </aside>
+
+      <!-- Skills Grid (right) -->
+      <section class="skills-flip" aria-label="Skills cards">
+        <div class="header">
+          <div class="title">Skills</div>
+          <div class="sub">Click a card to flip • Smooth animations • One open at a time</div>
+        </div>
+
+        <div id="grid" class="grid"></div>
+        <div id="empty" class="empty" hidden>No skills match your filters.</div>
+      </section>
+    </div>
   </main>
-  
-<footer class="footer">
-  <div>© Kranthi Kumar Gunji · Portfolio</div>
-</footer>
 
-  </body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div>© Kranthi Kumar Gunji · Portfolio</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/common.js" defer></script>
+  <script src="js/skills.js" defer></script>
+</body>
 </html>

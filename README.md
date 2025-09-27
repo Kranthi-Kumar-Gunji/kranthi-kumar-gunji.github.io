@@ -1,10 +1,20 @@
+# Kranthi Portfolio (Clean Structure)
 
-# Kranthi Kumar Gunji – Portfolio (v3)
+This package organizes your portfolio into a professional, maintainable structure.
 
-## Pages
-- `index.html` – Home .
-- `skills.html` – 3 sections, 2 cards each
-- `experience.html` – Curved, centerline timeline with alternating cards
-- `projects.html` – 3 sections: featured projects, auto GitHub, auto Trailblazer rank/points.
-- `contact.html` – 2 sections: contact form and contact info.
+## Structure
+- `index.html`, `about.html`, `skills.html`, `experience.html`, `projects.html`, `contact.html`
+- `css/` page styles + `common.css`
+- `js/` page scripts + `common.js`
+- `assets/images/` images and icons
+- `docs/` resume and supporting files
 
+## Local Preview
+Open `index.html` directly or use a lightweight server:
+```bash
+python -m http.server
+```
+
+## Deploy
+- **GitHub Pages**: push the folder to a repo, enable Pages → branch `main`, folder `/root`.
+- **Netlify/Vercel**: drag-and-drop the folder or connect repository.
