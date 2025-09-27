@@ -1,0 +1,154 @@
+/* ==========================================================================
+   6) CONTACT PAGE BLOCK (ALL styles here)
+   ========================================================================== */
+
+/* 6.1 Section wrapper */
+.contact-section{
+  background:linear-gradient(145deg,var(--bg1),var(--bg2));
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  overflow:hidden; /* keep visuals inside */
+}
+
+/* 6.2 Outside pill button */
+.contact-pill{
+  display:flex; justify-content:center; align-items:center;
+  font-size:18px; font-weight:600;
+  padding:14px 32px; margin:0 auto 10px auto;
+  border-radius:999px; width:max-content;
+  background:#0c172e; border:1px solid #1a2b4e; color:var(--text);
+  cursor:pointer; transition: box-shadow .25s ease, transform .2s ease;
+  position:relative; isolation:isolate; z-index:2; /* anchors orbit canvas */
+}
+.contact-pill:hover{
+  box-shadow:0 0 12px var(--brand), 0 0 24px #1a345c;
+  transform:translateY(-1px);
+}
+
+/* Orbit canvas (asteroid belt) */
+.contact-pill .orbit-canvas{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  pointer-events:none;
+  width: clamp(320px, 100% + 260px, 1200px);
+  height: clamp(220px, 100% + 260px, 900px);
+  z-index:2;
+  opacity:1;
+  transition: opacity 240ms ease;
+  background:transparent !important; box-shadow:none !important; outline:none !important; border:0 !important; filter:none !important;
+}
+/* Fade the belt when form opens (JS pauses physics too) */
+.contact-section.open .orbit-canvas{ opacity:0; }
+
+/* 6.3 Connector bridge */
+.contact-bridge{
+  width:100%; height:0; overflow:hidden;
+  transition:height var(--bridge-duration) ease;
+}
+.contact-section.open .contact-bridge,
+.contact-bridge.grow{ height:28px; }
+
+.contact-bridge .bridge-fill{
+  position:relative; margin:0 auto;
+  width:min(600px,85%); height:100%;
+}
+
+/* Base NEON line */
+.contact-bridge .bridge-fill::before{
+  content:""; position:absolute; left:0; right:0; top:50%;
+  height:3px; transform:translateY(-50%);
+  background:var(--brand); border-radius:999px;
+  box-shadow:0 0 12px var(--brand), 0 0 24px var(--brand);
+  animation:pulseLine 2s ease-in-out infinite;
+  opacity:0.85;
+}
+/* Moving CIRCUIT dashes */
+.contact-bridge .bridge-fill::after{
+  content:""; position:absolute; left:0; right:0; top:50%;
+  height:3px; transform:translateY(-50%);
+  border-radius:999px;
+  background:repeating-linear-gradient(
+    to right,
+    var(--brand) 0 12px,
+    transparent 12px 24px
+  );
+  animation:dashMove 1.5s linear infinite;
+  opacity:0.95;
+}
+
+/* Animations */
+@keyframes pulseLine{
+  0%,100%{ opacity:0.45; filter:drop-shadow(0 0 0 var(--brand)); transform:translateY(-50%) scaleX(0.92); }
+  50%    { opacity:1;    filter:drop-shadow(0 0 8px var(--brand)); transform:translateY(-50%) scaleX(1);    }
+}
+@keyframes dashMove{ from{ background-position:0 0; } to{ background-position:24px 0; } }
+
+@media (prefers-reduced-motion: reduce){
+  .contact-bridge .bridge-fill::before,
+  .contact-bridge .bridge-fill::after{ animation:none !important; }
+}
+
+/* 6.4 Collapsible card */
+.contact-card{
+  max-height:0; opacity:0; overflow:hidden;
+  transition:max-height var(--card-duration) ease, opacity 260ms ease, transform 260ms ease;
+  transform: translateY(-6px);
+  margin:0 auto;
+}
+.contact-card.revealed{
+  max-height:1200px; opacity:1; transform: translateY(0);
+}
+
+/* 6.5 Layout: photo + form grid */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px; align-items:center; justify-content:center;
+  margin-top:16px;
+}
+@media(max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+/* 6.6 Photo block */
+.contact-photo{ display:flex; justify-content:center; align-items:center; }
+.contact-photo img{
+  width:auto; max-width:260px; height:auto;
+  border-radius:22px; border:1px solid #1a2b4e;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+/* 6.6b Hard cap for the profile thumbnail inside the contact grid */
+.contact-grid .profile{
+  width: min(260px, 60vw);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #1a2b4e;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+.contact-grid .profile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+
+/* 6.7 Form block */
+.contact-form-block{ width:100%; max-width:500px; margin:0 auto; }
+.contact-form-grid{ display:grid; gap:10px; margin-top:8px; }
+.contact-input{
+  padding:12px; border-radius:10px; border:1px solid #1b2b4c;
+  background:#0c172e; color:var(--text);
+}
+.contact-input::placeholder{ color:#a3b0c0; }
+
+/* 6.8 Centered SEND button */
+.contact-send{ display:flex; justify-content:center; margin-top:12px; }
+.send-btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 16px; border-radius:999px;
+  background:#0c172e; border:1px solid #1a2b4e; color:var(--text);
+  cursor:pointer; transition:box-shadow .25s ease, transform .2s ease;
+}
+.send-btn:hover{ box-shadow:0 0 12px var(--brand), 0 0 24px #1a345c; transform:translateY(-1px); }
+.send-btn svg{ width:18px; height:18px; fill:currentColor; }

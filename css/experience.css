@@ -1,0 +1,137 @@
+/* ==========================================================================
+   4) EXPERIENCE PAGE BLOCK
+   ========================================================================== */
+
+/* Layout scaffold */
+.timeline-wrap { position: relative; margin: 10px 0 40px 0; }
+.tl-svg { position: absolute; inset: 0; pointer-events: none; opacity: .6; }
+.tl-list { position: relative; display: grid; gap: 26px; padding-top: 0; }
+
+/* Each row has two sides split by the center line */
+.tl-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 0;
+}
+
+/* Alternate the sides so cards “zig-zag” */
+.tl-item:nth-child(odd) .tl-side:first-child { order: 2; }
+.tl-item:nth-child(odd) .tl-side:last-child  { order: 1; }
+
+/* The card */
+.tl-card {
+  position: relative;                /* keep above markers/badges */
+  z-index: 1;
+  background: linear-gradient(180deg, #0e1832, #0b1429);
+  border: 1px solid #1a294a;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* Center node (dot) */
+.tl-node {
+  position: absolute;
+  left: calc(50% - 10px);
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--brand);
+  box-shadow: 0 0 0 6px #0a1530;     /* halo ring */
+  z-index: 0;
+}
+
+/* Year badge: “hugging” the node */
+.year-badge {
+  position: absolute;
+  top: 12px;                         /* align with node */
+  left: calc(50% + 28px);            /* just to the right of node */
+  background: #0c172e;
+  border: 1px solid #1a2b4e;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 0;                        /* never above the card */
+}
+/* Flip to the other side for alternating rows */
+.tl-item:nth-child(odd) .year-badge {
+  left: auto;
+  right: calc(50% + 28px);
+}
+
+/* Nudge the first row’s markers a bit */
+.tl-item:first-child .year-badge { top: 6px; }
+.tl-item:first-child .tl-node   { top: 8px; }
+
+/* ---------- Card internals ---------- */
+
+/* Header (title/meta + room for a top-right control if needed) */
+.tl-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tl-meta h3 { margin: 0 0 4px 0; }
+.tl-meta .muted { margin: 0 0 8px 0; }
+
+/* Bottom-centered footer that holds the toggle button */
+.tl-card-footer {
+  text-align: center;
+  margin-top: 12px;                  /* spacing above the button */
+}
+
+/* Toggle button (down chevron) */
+.tl-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #0c172e;
+  border: 1px solid #1a2b4e;
+  color: var(--text);
+  cursor: pointer;
+  transition: box-shadow .25s ease, transform .2s ease;
+}
+.tl-toggle:hover { box-shadow: 0 0 10px var(--brand); transform: translateY(-1px); }
+.tl-toggle:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+/* Rotate chevron when open (SVG inside the button) */
+.tl-card.open .tl-toggle svg {
+  transform: rotate(180deg);
+  transition: transform .25s ease;
+}
+
+/* Collapsible body: smooth height + fade */
+.tl-card-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .22s ease;
+}
+/* Expanded state (JS toggles .open on .tl-card) */
+.tl-card.open .tl-card-body {
+  max-height: 600px;                 /* big enough for typical content */
+  opacity: 1;
+}
+
+/* Keep in normal flow when hidden (no jump), actual height is controlled above */
+.tl-card-body[hidden] { display: block; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .tl-item { grid-template-columns: 1fr; }    /* stack */
+  /* Move badge away from node to avoid crowding stacked cards */
+  .year-badge {
+    left: auto;
+    right: 10px;
+    top: -6px;
+  }
+}

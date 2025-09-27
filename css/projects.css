@@ -1,0 +1,23 @@
+/* ==========================================================================
+   5) PROJECTS PAGE BLOCK (helpers)
+   ========================================================================== */
+.trailhead-card{ padding:22px; }
+.trailhead-top{ display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+.th-rank-img{
+  width:160px; height:160px; object-fit:contain;
+  border-radius:18px; background:#0a1530; border:1px solid #1a2b4e;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.th-metrics{ display:grid; grid-template-columns:repeat(3,minmax(110px,1fr)); gap:18px; }
+.th-metric{
+  background:linear-gradient(180deg,#0e1832,#0b1429);
+  border:1px solid #1a294a; border-radius:16px; padding:14px 16px; text-align:center;
+}
+.th-value{ font-size:clamp(22px,3.2vw,32px); font-weight:800; color:var(--text); }
+.th-label{ color:var(--muted); margin-top:4px; letter-spacing:.2px; }
+.th-agentblazer{
+  width:100%; max-width:520px; margin:18px 0 8px 0; display:block;
+  border-radius:14px; border:1px solid #1a2b4e; background:#0a1530;
+}
+.th-cta{ margin-top:6px; }
+.th-cta .icon-btn{ padding:10px 14px; height:auto; width:auto; }

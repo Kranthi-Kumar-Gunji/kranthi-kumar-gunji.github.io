@@ -1,0 +1,204 @@
+/* ================== GLOBAL THEME TOKENS ================== */
+:root{
+  /* layout */
+  --options-w: 300px;         /* sidebar width */
+  --options-gap: 18px;        /* gap between sidebar and grid */
+  --nav-offset: 64px;         /* sticky header height */
+
+  /* colors */
+  --bg1:#0b1220; --bg2:#0d1426; --panel:#0f1a33; --muted:#94a3b8; --text:#e6ebf5;
+  --brand:#2dd4bf; --ring:#1f3b66; --accent:#60a5fa;
+  --chip:#0c172e; --chip-brd:#1e2f52;
+
+  /* levels */
+  --expert:#16a34a; --advanced:#2563eb; --intermediate:#f59e0b; --beginner:#8b5cf6; --unrated:#64748b;
+}
+
+/* ================= FIXED OPTIONS SIDEBAR ================= */
+
+/* Keep page content from sliding under the fixed sidebar */
+.container.has-fixed-sidebar{
+  position: relative;
+  padding-left: calc(var(--options-w) + var(--options-gap));
+}
+
+/* Structural wrapper */
+.skills-layout{ position: relative; }
+
+/* Fixed options card aligned to the container’s left edge */
+.options-card{
+  position: fixed;
+  z-index: 10;
+
+  /* Align with centered container (width: min(1100px, 92vw)) */
+  left: calc(50% - min(1100px, 92vw) / 2);
+  width: var(--options-w);
+
+  /* Pin from header to footer */
+  top: var(--nav-offset);
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* we'll scroll inside .filters */
+  background: radial-gradient(900px 400px at 0% 0%, #18264a 0%, transparent 55%),
+              linear-gradient(180deg,#0f1933,#0b142a);
+  border:1px solid #1b2a4a; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+  padding:16px 14px 14px 14px;
+}
+
+/* Title + compact Clear button */
+.options-title{
+  margin:0 0 6px 2px; font-size:16px; font-weight:800; letter-spacing:.2px; color:var(--text);
+}
+.clear-btn-compact{
+  position:absolute; top:10px; right:10px;
+  width:28px; height:28px; border-radius:8px;
+  display:grid; place-items:center;
+  background:#0b1630; color:var(--text); border:1px solid #22355e;
+  cursor:pointer; opacity:.9;
+  transition: transform .15s ease, box-shadow .2s ease, opacity .15s ease;
+  line-height:1; font-weight:800;
+}
+.clear-btn-compact:hover{
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:0 0 10px rgba(45,212,191,.35);
+  opacity:1;
+}
+
+/* Internal scroll area for chips */
+.options-card .filters{
+  flex: 1 1 auto;
+  overflow: auto;
+  margin-top: 8px;
+  display:flex; flex-wrap:wrap; gap:10px;
+  background:rgba(13,20,38,.35);
+  border:1px solid #1a2b4e; border-radius:14px;
+  padding:12px;
+}
+
+/* ===================== FILTER CHIPS ===================== */
+.chip{
+  position:relative;display:inline-flex;align-items:center;gap:8px;
+  padding:8px 12px;border-radius:999px;background:linear-gradient(135deg,#0c162e,#0a1327);
+  border:1px solid #22355e;color:var(--text);font-weight:700;cursor:pointer;transition:all .2s ease;
+  overflow:hidden;transform:translateZ(0); font-size:13px;
+}
+.chip .ico{font-size:14px;opacity:.95}
+.chip .label{letter-spacing:.3px}
+.chip .count{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#0b1630;border:1px solid #274070;font-size:11px;opacity:.9}
+.chip:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 0 2px rgba(45,212,191,.25),0 10px 24px rgba(0,0,0,.35)}
+.chip.is-active{background:linear-gradient(180deg, rgba(45,212,191,.14), rgba(45,212,191,.08));box-shadow:0 0 0 2px var(--brand),0 0 30px rgba(45,212,191,.18)}
+.chip::after{
+  content:"";position:absolute;top:-120%;left:-30%;width:60%;height:340%;
+  background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.15) 40%,transparent 80%);
+  transform:rotate(25deg);opacity:0;transition:opacity .25s ease, transform .6s ease
+}
+.chip:hover::after{opacity:1;transform:rotate(25deg) translateX(120%)}
+
+/* ================== GRID & CARD SIZING ================== */
+/* ~20% smaller cards than the earlier values */
+.skills-flip .grid{
+  display:grid;
+  gap:14px;
+  --card-min: clamp(192px, 22.5vw, 272px); /* was 240/28vw/340 */
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+}
+
+/* ================== CARD-LIKE FLIP ANIMATION ================= */
+/* Center-pivot, rigid card flip (not a page turn) */
+.skills-flip .card{
+  position:relative;
+  min-height:200px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  user-select: none;            /* avoid text-selection blocking clicks */
+  will-change: transform;
+}
+
+/* Faces rotate like a stiff board around center */
+.skills-flip .face{
+  position:absolute; inset:0;
+  border:1px solid #1b2a4a; border-radius:14px;
+  background:radial-gradient(900px 400px at 0% 0%, #18264a 0%, transparent 55%),
+             linear-gradient(180deg,#0f1933,#0b142a);
+  padding:14px;
+  display:flex; flex-direction:column; justify-content:center; gap:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;           /* center pivot */
+  transition: transform .9s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+
+/* Default & flipped orientations (pure board flip) */
+.skills-flip .card .front{ transform: rotateY(0deg); }
+.skills-flip .card .back { transform: rotateY(180deg); }
+.skills-flip .card.is-flipped .front{ transform: rotateY(-180deg); }
+.skills-flip .card.is-flipped .back { transform: rotateY(0deg); }
+
+/* Tiny thickness illusion */
+.skills-flip .face > *{ transform: translateZ(1px); }
+
+/* Micro-interactions */
+@keyframes tap-pop{0%{transform:scale(.985)}100%{transform:scale(1)}}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(45,212,191,.25)}100%{box-shadow:0 0 0 10px rgba(45,212,191,0)}}
+.skills-flip .card.clicked .face{ animation: ring .40s ease; }
+.skills-flip .card.clicked{ animation: tap-pop .16s ease; }
+.skills-flip .card.is-pressed .face{ filter:brightness(1.05); }
+
+/* Center glint (replaces page-like sheen sweep) */
+.skills-flip .face::before{
+  content:"";
+  position:absolute; inset:0; pointer-events:none;
+  background: radial-gradient(60% 50% at 50% 50%,
+              rgba(255,255,255,.12) 0%,
+              rgba(255,255,255,0) 60%);
+  opacity:0;
+  transform: scale(.9);
+}
+.skills-flip .card.is-flipping .face::before{
+  animation: card-glint .45s ease both;
+}
+@keyframes card-glint{
+  from{opacity:0; transform: scale(.95);}
+  35%{opacity:.5; transform: scale(1);}
+  to{opacity:0; transform: scale(1.02);}
+}
+
+/* ====================== TEXT & BARS ===================== */
+.skills-flip .row{display:flex;align-items:center;justify-content:space-between}
+.skills-flip .skill-name{font-weight:800;color:var(--text)}
+.skills-flip .meta{color:var(--muted);font-size:12px}
+.skills-flip .desc,.skills-flip .years{margin:0;color:var(--muted)}
+
+.skills-flip .pill{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:12px}
+.skills-flip .pill.expert{background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.35)}
+.skills-flip .pill.advanced{background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.35)}
+.skills-flip .pill.intermediate{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35)}
+.skills-flip .pill.beginner{background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.35)}
+.skills-flip .pill.unrated{background:rgba(100,116,139,.14);border:1px solid rgba(100,116,139,.35)}
+
+.skills-flip .bar{height:6px;border-radius:999px;background:#0c172e;border:1px solid #1a2b4e;overflow:hidden}
+.skills-flip .bar > i{display:block;height:100%;width:0}
+.skills-flip .bar.expert > i{background:linear-gradient(90deg,var(--expert),#22c55e)}
+.skills-flip .bar.advanced > i{background:linear-gradient(90deg,var(--advanced),#38bdf8)}
+.skills-flip .bar.intermediate > i{background:linear-gradient(90deg,var(--intermediate),#fde047)}
+.skills-flip .bar.beginner > i{background:linear-gradient(90deg,var(--beginner),#a78bfa)}
+.skills-flip .bar.unrated > i{background:linear-gradient(90deg,var(--unrated),#94a3b8)}
+
+/* ================ RESPONSIVE FALLBACK ================ */
+@media (max-width: 900px){
+  .container.has-fixed-sidebar{ padding-left: 0; }
+  .options-card{
+    position: sticky;
+    left: auto; right: auto; width: 100%;
+    top: var(--nav-offset);
+    bottom: auto;
+    margin-bottom: 12px;
+  }
+}
