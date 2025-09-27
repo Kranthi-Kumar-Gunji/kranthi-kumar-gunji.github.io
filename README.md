@@ -2,7 +2,7 @@
 
 A responsive **personal portfolio website** created to showcase my professional background, technical skills, projects, and achievements.
 
-🌍 **Live Site**: [Kranthi Portfolio](https://kranthi-kumar-gunji.github.io/kranthi-portfolio/)  
+🌍 **Live Site**: [Kranthi Portfolio](https://kranthi-kumar-gunji.github.io/)  
 
 ---
 
