@@ -17,7 +17,7 @@ This site highlights my career journey, technical expertise, and projects in an 
 ---
 
 ## 📂 Structure
-```text
+
 kranthi-portfolio/
 ├─ index.html
 ├─ skills.html
@@ -47,7 +47,6 @@ kranthi-portfolio/
    ├─ experience.js
    ├─ skills.js
    └─ social-buttons.js
-
 
 ---
 
