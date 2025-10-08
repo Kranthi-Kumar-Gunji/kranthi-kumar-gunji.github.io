@@ -15,7 +15,7 @@ A responsive **personal portfolio website** created to showcase my professional 
 
 ---
 
-## 📂 Structure (Collapsible)
+## 📂 Structure
 
 **Root files**
 ```text
