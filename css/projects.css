@@ -1,6 +1,21 @@
 /* ==========================================================================
    5) PROJECTS PAGE BLOCK (helpers)
    ========================================================================== */
+
+body {
+  background:
+    linear-gradient(
+      rgba(6,12,24,0.75),
+      rgba(6,12,24,0.75)
+    ),
+    url('/assets/images/ProjectBG.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .badges{ display:flex; flex-wrap:wrap; gap:10px; }
 .badge{
   display:inline-flex; align-items:center; gap:8px;
