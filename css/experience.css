@@ -1,6 +1,19 @@
 /* ==========================================================================
    4) EXPERIENCE PAGE BLOCK
    ========================================================================== */
+body {
+  background:
+    linear-gradient(
+      rgba(6,12,24,0.75),
+      rgba(6,12,24,0.75)
+    ),
+    url('/assets/images/ExperienceBG.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 /* Layout scaffold */
 .timeline-wrap { position: relative; margin: 10px 0 40px 0; }

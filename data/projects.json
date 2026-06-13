@@ -1,17 +1,42 @@
 [
   {
-    "title": "Nonprofit Impact Data Warehouse",
-    "desc": "Centralized program, funding, and outcomes data; automated dashboards for real-time impact.",
-    "stack": ["Snowflake","Python","Tableau"]
+    "title": "PostgreSQL Database Optimization & GraphQL API Platform",
+    "desc": "Designed PostgreSQL schemas, indexing strategies, and Hasura GraphQL APIs to improve query performance and secure data access.",
+    "stack": ["PostgreSQL", "Hasura", "GraphQL", "Docker"]
   },
   {
-    "title": "Salesforce → Tableau CRM Dashboards",
-    "desc": "Executive dashboards for SLA, churn, pipeline.",
-    "stack": ["Salesforce","Tableau CRM"]
+    "title": "Snowflake Data Warehouse & Analytics Platform",
+    "desc": "Built Python and SQL data pipelines integrating AWS S3 with Snowflake, enabling scalable analytics and reporting.",
+    "stack": ["Snowflake", "Python", "AWS S3", "SQL"]
   },
   {
-    "title": "SAP HANA Real‑Time Ops Reporting",
-    "desc": "Modeled HANA views; low‑latency insights.",
-    "stack": ["SAP BODS","SAP HANA","Tableau","Lumira"]
+    "title": "Salesforce CRM Analytics Dashboard Suite",
+    "desc": "Developed Tableau CRM dashboards for SLA, churn, and opportunity tracking while integrating Salesforce with external systems.",
+    "stack": ["Salesforce", "Tableau CRM", "Apex", "REST API"]
+  },
+  {
+    "title": "Enterprise ETL Migration to SAP HANA",
+    "desc": "Migrated large-scale Oracle datasets into SAP HANA and developed optimized ETL pipelines for enterprise reporting.",
+    "stack": ["SAP BODS", "SAP HANA", "Oracle", "Informatica"]
+  },
+  {
+    "title": "Real-Time Operational Reporting Platform",
+    "desc": "Built SAP HANA analytical views and integrated Tableau, Power BI, and Lumira for real-time business insights.",
+    "stack": ["SAP HANA", "Tableau", "Power BI", "Lumira"]
+  },
+  {
+    "title": "CI/CD Enabled Database Engineering Framework",
+    "desc": "Implemented Docker-based database environments and GitHub Actions pipelines to automate deployments and database workflows.",
+    "stack": ["Docker", "GitHub Actions", "github", "PostgreSQL"]
+  },
+  {
+    "title": "AWS-Powered Data Processing Pipelines",
+    "desc": "Developed scalable ETL workflows using Python, AWS S3, EC2, and SQL to support enterprise analytics workloads.",
+    "stack": ["Python", "AWS S3", "EC2", "SQL"]
+  },
+  {
+    "title": "Database Performance Tuning & Query Optimization",
+    "desc": "Optimized SQL queries, indexing strategies, and database schemas to improve reporting performance and application responsiveness.",
+    "stack": ["PostgreSQL", "SQL Server", "Oracle", "Performance Tuning"]
   }
 ]
