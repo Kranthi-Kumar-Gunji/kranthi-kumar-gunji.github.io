@@ -1,6 +1,19 @@
 /* ==========================================================================
    6) CONTACT PAGE BLOCK (ALL styles here)
    ========================================================================== */
+body {
+  background:
+    linear-gradient(
+      rgba(6,12,24,0.75),
+      rgba(6,12,24,0.75)
+    ),
+    url('/assets/images/ContactBG.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 /* 6.1 Section wrapper */
 .contact-section{

@@ -1,4 +1,19 @@
 /* ================== GLOBAL THEME TOKENS ================== */
+body {
+  background:
+    linear-gradient(
+      rgba(6,12,24,0.75),
+      rgba(6,12,24,0.75)
+    ),
+    url('/assets/images/SkillBG.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 :root{
   /* layout */
   --options-w: 300px;         /* sidebar width */
