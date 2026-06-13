@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "👋 Hello, I'm Kranthi Kumar",
+    "subtitle": "Data Engineering · Data Analytics · Salesforce Consultant",
+    "profile": "assets/images/profile.png",
+    "badges": ["🔎SQL","🗄ETL","🔄Informatica","🏢SAP BODS","SAP HANA","📊Tableau","📈Power BI","☁️AWS","🐍Python","🚀Salesforce","⚡Apex"]
+  },
+  "summary": [
+    "I help organizations turn data into decisions. With over 5 years of experience delivering CRM, ETL, BI, and analytics solutions, I specialize in building scalable systems that drive performance, precision, and insight.",
+    "🔧 Core Expertise",
+    "✨ Salesforce Development: Apex, Lightning Components, REST/SOAP APIs",
+    "✨ Data Engineering & Analytics: Python, SQL, Tableau, Power BI, Snowflake",
+    "✨ ETL & Cloud Platforms: SAP BODS, Informatica, AWS",
+    "📊 From designing relational databases to automating reporting workflows, I bring clarity to complexity — enabling faster decisions and measurable impact across nonprofit and enterprise sectors.",
+    "🌍 My work bridges the gap between raw data and strategic outcomes. Whether it's integrating platforms or cleaning messy datasets, I focus on delivering solutions that are accurate, efficient, and built to scale.",
+    "🚀 I’m passionate about using data to solve real-world problems, support mission-driven goals, and unlock growth through intelligent automation."
+  ],
+  "education": [
+    { "school": "Cleveland State University", "detail": "M.S. in Information Systems · Aug 2023 – May 2025", "logo": "assets/images/csu.png" },
+    { "school": "Visvesvaraya Technological University", "detail": "B.E. in Electronics & Communication · Aug 2014 – Jun 2018", "logo": "assets/images/vtu.png" }
+  ],
+  "certifications": [
+    { "name": "Salesforce Certified Platform Developer I", "when": "Apr 2022", "logo": "assets/images/sf-pd1.png" },
+    { "name": "Salesforce Certified Administrator", "when": "Mar 2022", "logo": "assets/images/sf-admin.png" }
+  ]
+}
