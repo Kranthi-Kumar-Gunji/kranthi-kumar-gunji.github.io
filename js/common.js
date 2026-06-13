@@ -125,11 +125,8 @@ window.findBadgeStyle = raw => {
   return entry ? entry.style : '';
 };
 
-window.slugifyBadge = raw => 'tech-'+normalizeTech(raw).replace(/\s+/g, '-');
-
 window.makeBadges = arr => (arr||[]).filter(Boolean).map(raw => {
   const label = findBadgeLabel(raw);
-  const cls = slugifyBadge(raw);
   const style = findBadgeStyle(raw);
-  return `<span class="badge ${cls}"${style ? ` style="${style}"` : ''}>${label}</span>`;
+  return `<span class="badge"${style ? ` style="${style}"` : ''}>${label}</span>`;
 }).join('');
