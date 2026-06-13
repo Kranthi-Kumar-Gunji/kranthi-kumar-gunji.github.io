@@ -1,0 +1,76 @@
+[
+  {
+    "id": "exp-2025-intern",
+    "title": "Data Scientist Intern",
+    "company": "Forman Tech Group LLC (Remote)",
+    "period": "Aug 2025 – Present",
+    "year": "2025",
+    "skills": ["Python","SQL","AWS (S3, EC2)","Snowflake","Tableau","Power BI"],
+    "bullets": [
+      "Designed and validated ML/statistical models addressing business challenges.",
+      "Built scalable pipelines using Python and SQL on AWS services.",
+      "Performed EDA to identify trends, anomalies, and insights.",
+      "Created interactive Tableau / Power BI dashboards for stakeholders.",
+      "Integrated AI/ML models into enterprise systems via APIs and automation."
+    ]
+  },
+  {
+    "id": "exp-2023-ms",
+    "title": "M.S. in Information Systems",
+    "company": "Cleveland State University",
+    "period": "Aug 2023 – May 2025",
+    "year": "2023",
+    "skills": ["Graduate Coursework"],
+    "bullets": ["Graduate coursework and projects in information systems."]
+  },
+  {
+    "id": "exp-2022-stratos",
+    "title": "Salesforce Consultant",
+    "company": "Stratos Studio (India)",
+    "period": "Jan 2022 – Mar 2023",
+    "year": "2022",
+    "skills": ["Salesforce Lightning","Apex","Flow Builder","Tableau CRM","SOQL/SOSL"],
+    "bullets": [
+      "Delivered Lightning/Aura interfaces and Flow automations to improve adoption.",
+      "Created Apex triggers/batches (-35% manual tasks).",
+      "Built Tableau CRM dashboards for SLA, churn, opportunities.",
+      "Integrated Salesforce with external systems via REST/SOAP APIs."
+    ]
+  },
+  {
+    "id": "exp-2020-systech",
+    "title": "Associate Software Engineer",
+    "company": "Systech Solutions (India)",
+    "period": "Jan 2020 – Dec 2021",
+    "year": "2020",
+    "skills": ["SAP BODS","SAP HANA","SQL","Python","Tableau","SAP Lumira","AWS"],
+    "bullets": [
+      "Integrated 10+ sources into SAP HANA with reusable BODS jobs.",
+      "Migrated Oracle → HANA datasets (cut migration time ~30%).",
+      "Modeled HANA views; reduced report latency by 60%.",
+      "Automated S3 → HANA pipelines in Python; provisioned EC2 envs."
+    ]
+  },
+  {
+    "id": "exp-2018-gradespot",
+    "title": "Data Analyst",
+    "company": "GradeSpot IT Solutions (India)",
+    "period": "Apr 2018 – Dec 2019",
+    "year": "2018",
+    "skills": ["Informatica","SQL","MS SQL Server","Power BI","Tableau","Python","Excel"],
+    "bullets": [
+      "Designed Informatica pipelines for EPOS/relational data ingestion.",
+      "Built real-time dashboards; automated monthly reporting (-40% time).",
+      "Reconciled cross-system data to improve BI trust and accuracy."
+    ]
+  },
+  {
+    "id": "exp-2014-ug",
+    "title": "B.E. in Electronics & Communication",
+    "company": "VTU University",
+    "period": "Aug 2014 – Jun 2018",
+    "year": "2014",
+    "skills": ["Undergraduate Coursework"],
+    "bullets": []
+  }
+]
