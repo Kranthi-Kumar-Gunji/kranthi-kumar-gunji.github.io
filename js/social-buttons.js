@@ -32,7 +32,7 @@
     if (container.dataset.socialButtonsMounted) return;
     container.dataset.socialButtonsMounted = 'true';
 
-    const src = container.getAttribute('data-social-buttons') || 'social-buttons.html';
+    const src = container.getAttribute('data-social-buttons') || '../social-buttons.html';
     const isFileProto = location.protocol === 'file:';
 
     const render = html => { container.innerHTML = html; };
