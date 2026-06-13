@@ -21,7 +21,6 @@ async function loadRepos() {
         <div class="card" style="margin:10px 0">
           <h3><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h3>
           <p class="muted">Updated: ${new Date(r.updated_at).toLocaleDateString()} · ★ ${r.stargazers_count}</p>
-          <div class="badges">${makeBadges([r.language, r.fork ? 'Fork' : null].filter(Boolean))}</div>
         </div>
       `).join('');
     } else { el.textContent = 'Unable to load repositories.'; }

@@ -54,10 +54,6 @@ window.TECH_MAP = {
     label: '☁️ AWS',
     style: 'background: linear-gradient(90deg,#ff9900,#ffb347); color:#061226; border-color:rgba(255,255,255,0.06);'
   },
-  'aws s3 ec2': {
-    label: '☁️ AWS',
-    style: 'background: linear-gradient(90deg,#ff9900,#ffb347); color:#061226; border-color:rgba(255,255,255,0.06);'
-  },
   'informatica': {
     label: '🔄 Informatica',
     style: 'background: linear-gradient(90deg,#6b7280,#0f172a); color:#fff; border-color:rgba(255,255,255,0.06);'
@@ -97,10 +93,6 @@ window.TECH_MAP = {
   'undergraduate coursework': {
     label: '🎓 Undergraduate Coursework',
     style: 'background: linear-gradient(90deg,#111827,#334155); color:#fff; border-color:rgba(255,255,255,0.06);'
-  },
-  'fork': {
-    label: '🍴 Fork',
-    style: 'background: linear-gradient(90deg,#4b5563,#111827); color:#fff; border-color:rgba(255,255,255,0.06);'
   }
 };
 
