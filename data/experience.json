@@ -5,7 +5,7 @@
     "company": "Forman Tech Group LLC (Remote)",
     "period": "Aug 2025 – Present",
     "year": "2025",
-    "skills": ["Python","SQL","AWS (S3, EC2)","Snowflake","Tableau","Power BI"],
+    "skills": ["Python","SQL","AWS","Snowflake","Tableau","Power BI"],
     "bullets": [
       "Designed and validated ML/statistical models addressing business challenges.",
       "Built scalable pipelines using Python and SQL on AWS services.",

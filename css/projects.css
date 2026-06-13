@@ -1,6 +1,15 @@
 /* ==========================================================================
    5) PROJECTS PAGE BLOCK (helpers)
    ========================================================================== */
+.badges{ display:flex; flex-wrap:wrap; gap:10px; }
+.badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px; border-radius:999px; color:#fff;
+  background:#ffffff11; border:1px solid #ffffff20;
+  backdrop-filter:saturate(140%) blur(6px);
+  font-size:13px; line-height:1; transition:box-shadow .25s ease, transform .2s ease;
+}
+.badge:hover{ box-shadow:0 0 10px var(--brand), 0 0 20px #1b355e; transform:translateY(-1px); }
 .trailhead-card{ padding:22px; }
 .trailhead-top{ display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
 .th-rank-img{
@@ -21,3 +30,4 @@
 }
 .th-cta{ margin-top:6px; }
 .th-cta .icon-btn{ padding:10px 14px; height:auto; width:auto; }
+

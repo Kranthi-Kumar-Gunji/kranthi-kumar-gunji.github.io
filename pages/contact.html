@@ -6,8 +6,8 @@
   <title>Contact – Kranthi Kumar Gunji</title>
 
   <!-- Use the correct relative path to your stylesheet -->
-<link rel="stylesheet" href="css/styles.css" />
-<link rel="stylesheet" href="css/contact.css" />
+<link rel="stylesheet" href="../css/styles.css" />
+<link rel="stylesheet" href="../css/contact.css" />
 
 
 </head>
@@ -32,12 +32,12 @@
     <!-- Contact Info card + Social links component mount -->
     <section class="grid contact-grid">
 
-		<article id="contact-info-card" class="card">
-			<div class="profile"><img src="assets/images/profile.png" alt="Profile photo of Kranthi Kumar Gunji" /></div>
-			<div data-social-buttons="components/social-buttons.html"></div> 
-			<p><strong>Email:</strong> <a href="mailto:Kranthikumar0013@gmail.com">Kranthikumar0013@gmail.com</a></p>
-			<p><strong>Phone:</strong> +1 (216) 354 5250</p>
-		</article>
+    <article id="contact-info-card" class="card">
+      <div class="profile"><img id="contact-profile" src="../assets/images/profile.png" alt="Profile photo of Kranthi Kumar Gunji" /></div>
+      <div data-social-buttons="../social-buttons.html"></div> 
+      <p><strong>Email:</strong> <a id="contact-email" href="mailto:">loading...</a></p>
+      <p><strong>Phone:</strong> <span id="contact-phone">loading...</span></p>
+    </article>
 
 
       <!-- Collapsible "Contact Me" area -->
@@ -85,8 +85,9 @@
     <div>© Kranthi Kumar Gunji · Portfolio</div>
   </footer>
 
-  <script src="js/contact.js" defer></script>
-  <script src="js/social-buttons.js" defer></script>
-  <script src="js/common.js"></script>
+  <script src="../js/contact.js" defer></script>
+  <script src="../js/render-contact.js" defer></script>
+  <script src="../js/social-buttons.js" defer></script>
+  <script src="../js/common.js"></script>
 </body>
 </html>

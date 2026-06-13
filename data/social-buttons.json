@@ -1,0 +1,6 @@
+[
+  { "icon": "github", "title": "GitHub", "tooltip": "GitHub", "ariaLabel": "GitHub", "url": "https://github.com/Kranthi-Kumar-Gunji" },
+  { "icon": "linkedin", "title": "LinkedIn", "tooltip": "LinkedIn", "ariaLabel": "LinkedIn", "url": "https://www.linkedin.com/in/kranthikumargunji" },
+  { "icon": "trailhead", "title": "Trailhead", "tooltip": "Trailhead", "ariaLabel": "Trailhead", "url": "https://www.salesforce.com/trailblazer/kranthikumar2802" },
+  { "icon": "tableau", "title": "Tableau Public", "tooltip": "Tableau Public", "ariaLabel": "Tableau Public", "url": "https://public.tableau.com/app/profile/kranthi.kumar.gunji" }
+]
