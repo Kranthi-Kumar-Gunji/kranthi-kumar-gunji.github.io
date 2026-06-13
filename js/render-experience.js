@@ -5,7 +5,7 @@
     if(!container) return;
     let items = [];
     try{
-      const res = await fetch('data/experience.json');
+      const res = await fetch('../data/experience.json');
       if(res.ok) items = await res.json();
       else { console.warn('Failed to load experience.json', res.status); }
     }catch(err){ console.error('Error loading experience.json', err); }
@@ -22,8 +22,8 @@
       const meta = document.createElement('div'); meta.className = 'tl-meta';
       const h3 = document.createElement('h3'); h3.textContent = it.title;
       const p = document.createElement('p'); p.className = 'muted'; p.textContent = `${it.company} · ${it.period}`;
-      const chips = document.createElement('div');
-      (it.skills||[]).forEach(s=>{ const sp=document.createElement('span'); sp.className='skill-chip'; sp.textContent=s; chips.appendChild(sp); });
+      const chips = document.createElement('div'); chips.className='badges';
+      chips.innerHTML = makeBadges(it.skills);
       meta.appendChild(h3); meta.appendChild(p); meta.appendChild(chips);
       header.appendChild(meta);
 

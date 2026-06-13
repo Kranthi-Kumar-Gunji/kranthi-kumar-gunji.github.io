@@ -11,7 +11,7 @@
   // Load SKILLS from data/skills.json (keeps the HTML/JS smaller and data-driven)
   let SKILLS = [];
   try{
-    const res = await fetch('data/skills.json');
+    const res = await fetch('../data/skills.json');
     if(res.ok) SKILLS = await res.json();
     else console.warn('Failed to load data/skills.json:', res.status);
   }catch(err){
